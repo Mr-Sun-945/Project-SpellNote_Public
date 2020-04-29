@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class InputCallbacks : MonoBehaviour
 {
+    private Note noteObj = new Note();
+
     public void OnNote(InputValue value)
     {
         Staff staff = gameObject.GetComponent<Staff>();
@@ -22,5 +24,8 @@ public class InputCallbacks : MonoBehaviour
 
         double accuracy = nearestBeat - beatsPassed;
         Debug.Log("Accuracy = " + accuracy);
+
+        string result = noteObj.HitAccuracy(nearestBeat, accuracy);
+        Debug.Log(result);
     }
 }
