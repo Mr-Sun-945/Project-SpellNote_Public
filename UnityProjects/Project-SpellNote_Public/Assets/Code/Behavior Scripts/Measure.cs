@@ -5,46 +5,38 @@ using UnityEngine;
 public class Measure : MonoBehaviour
 {
     // Public vars
-    public GameObject metronome_object;
-
-    public Vector3 translateDirection;
+    public Staff staff;
+    public float lifespan;
 
     // Private vars
-    private UnityMetronome metronome_script;
-    private double bpm;
-
-    private double measureSize = 10; // World space size of a measure; dependant on asset size
-    private double beatSize;
-    private double bps;
-    private float distancePerSecond;
-    private Transform childMeasure;
+    private float spawnTime;
+    private float deathTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get the BPM of the metronome
-        UnityMetronome metronome_script = metronome_object.GetComponent<UnityMetronome>();
-        bpm = metronome_script.bpm;
-        Debug.Log("Current BPM = " + bpm);
+        staff = transform.parent.gameObject.GetComponent<Staff>();
+        lifespan = staff.measureLifespan;
+        //Debug.Log("Lifespan = " + lifespan);
+        spawnTime = Time.time;
+        //Debug.Log("Spawn Time = " + spawnTime);
+        deathTime = spawnTime + lifespan;
+        //Debug.Log("Death Time = " + deathTime);
 
-        // Calculate world-space size of a beat based on measure size
-        beatSize = measureSize / 4; 
-        Debug.Log("Beat Size = " + beatSize);
-
-        // Calculate the distance moved per second
-        bps = bpm / 60.0f;
-        distancePerSecond = (float)(bps * beatSize);
-        Debug.Log("Distance Per Second = " + distancePerSecond);
-
-        // Get child measure to transform
-        childMeasure = gameObject.transform.GetChild(0);
+        // NOTE: Disabling this because it causes the measures to drift off-beat
+        // Update position based on last frame to keep measure in-line
+        //transform.Translate(staff.frameDelta);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 frameDelta = translateDirection * Time.deltaTime * distancePerSecond;
-        //Debug.Log("Frame Delta = " + frameDelta);
-        childMeasure.Translate(frameDelta);
+        transform.Translate(staff.frameDelta);
+
+        if (deathTime <= Time.time)
+        {
+            Destroy(gameObject);
+        }
     }
 }
+

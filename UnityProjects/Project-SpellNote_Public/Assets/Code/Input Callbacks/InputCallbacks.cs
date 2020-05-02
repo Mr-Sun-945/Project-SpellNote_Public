@@ -19,13 +19,7 @@ public class InputCallbacks : MonoBehaviour
         double beatsPassed = (Time.time/secondsPerBeat) + 1;
         //Debug.Log("Beats Passed = " + beatsPassed);
 
-        int nearestBeat = (int)Math.Round(beatsPassed);
-        //Debug.Log("Nearest Beat = " + nearestBeat);
-
-        double accuracy = nearestBeat - beatsPassed;
-        Debug.Log("Accuracy = " + accuracy);
-
-        string result = noteObj.HitAccuracy(nearestBeat, accuracy);
+        string result = noteObj.HitAccuracy(beatsPassed);
         Debug.Log(result);
     }
 }
