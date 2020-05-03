@@ -1,5 +1,5 @@
 {
-    "name": "Project-SpellNote_Public",
+    "name": "GameplayActions",
     "maps": [
         {
             "name": "Player",
@@ -33,6 +33,22 @@
                     "name": "Note",
                     "type": "Button",
                     "id": "979b9de4-2044-405d-884e-e83a0c87e0e7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PrintLog",
+                    "type": "Button",
+                    "id": "2de3b685-23f6-478f-b277-08327921ecee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "WipeLog",
+                    "type": "Button",
+                    "id": "b3ae5ce3-56d3-492f-a6b5-8e500c694b44",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -278,6 +294,39 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Note",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e46bd017-489d-481f-b2aa-b432db4b76b0",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PrintLog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5464548-6899-490f-b8e3-2252c56f85ea",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PrintLog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6de6beb-fc5d-494d-a127-d714c8d7b30a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "WipeLog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

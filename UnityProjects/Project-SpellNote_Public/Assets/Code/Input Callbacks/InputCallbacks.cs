@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class InputCallbacks : MonoBehaviour
 {
     private Note noteObj = new Note();
+    private NoteLog noteLog = new NoteLog();
 
     public void OnNote(InputValue value)
     {
@@ -19,7 +20,21 @@ public class InputCallbacks : MonoBehaviour
         double beatsPassed = (Time.time/secondsPerBeat) + 1;
         //Debug.Log("Beats Passed = " + beatsPassed);
 
-        string result = noteObj.HitAccuracy(beatsPassed);
-        Debug.Log(result);
+        string accuracy = noteObj.HitAccuracy(beatsPassed);
+
+        double quantizedHit = noteObj.QuantizeToMeasure(beatsPassed);
+        Debug.Log(quantizedHit);
+
+        noteLog.AddEntry(quantizedHit);
+    }
+
+    public void OnPrintLog(InputValue value)
+    {
+        Debug.Log(string.Join(",", noteLog.log));
+    }
+
+    public void OnWipeLog(InputValue value)
+    {
+        noteLog.WipeLog();
     }
 }
