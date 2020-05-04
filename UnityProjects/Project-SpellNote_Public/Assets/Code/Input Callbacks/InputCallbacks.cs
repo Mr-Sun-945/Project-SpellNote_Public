@@ -23,9 +23,9 @@ public class InputCallbacks : MonoBehaviour
         string accuracy = noteObj.HitAccuracy(beatsPassed);
 
         double quantizedHit = noteObj.QuantizeToMeasure(beatsPassed);
-        Debug.Log(quantizedHit);
+        double identifiedNote = noteObj.IdentifyNote(quantizedHit);
 
-        noteLog.AddEntry(quantizedHit);
+        noteLog.AddEntry(identifiedNote);
     }
 
     public void OnPrintLog(InputValue value)
@@ -36,5 +36,11 @@ public class InputCallbacks : MonoBehaviour
     public void OnWipeLog(InputValue value)
     {
         noteLog.WipeLog();
+        Debug.Log("Log Wiped");
+    }
+    
+    public void OnTestAction(InputValue value)
+    {
+        noteLog.ToNoteTypes();
     }
 }

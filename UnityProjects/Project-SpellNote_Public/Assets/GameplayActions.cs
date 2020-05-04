@@ -65,6 +65,14 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""TestAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ba54068-11da-4740-922b-d9edf680b4d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -340,6 +348,17 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""WipeLog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba2988cb-25ae-46cf-acc1-7b340faf988b"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""TestAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -923,6 +942,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         m_Player_Note = m_Player.FindAction("Note", throwIfNotFound: true);
         m_Player_PrintLog = m_Player.FindAction("PrintLog", throwIfNotFound: true);
         m_Player_WipeLog = m_Player.FindAction("WipeLog", throwIfNotFound: true);
+        m_Player_TestAction = m_Player.FindAction("TestAction", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -990,6 +1010,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Note;
     private readonly InputAction m_Player_PrintLog;
     private readonly InputAction m_Player_WipeLog;
+    private readonly InputAction m_Player_TestAction;
     public struct PlayerActions
     {
         private @GameplayActions m_Wrapper;
@@ -1000,6 +1021,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         public InputAction @Note => m_Wrapper.m_Player_Note;
         public InputAction @PrintLog => m_Wrapper.m_Player_PrintLog;
         public InputAction @WipeLog => m_Wrapper.m_Player_WipeLog;
+        public InputAction @TestAction => m_Wrapper.m_Player_TestAction;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1027,6 +1049,9 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 @WipeLog.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWipeLog;
                 @WipeLog.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWipeLog;
                 @WipeLog.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWipeLog;
+                @TestAction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTestAction;
+                @TestAction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTestAction;
+                @TestAction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTestAction;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1049,6 +1074,9 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 @WipeLog.started += instance.OnWipeLog;
                 @WipeLog.performed += instance.OnWipeLog;
                 @WipeLog.canceled += instance.OnWipeLog;
+                @TestAction.started += instance.OnTestAction;
+                @TestAction.performed += instance.OnTestAction;
+                @TestAction.canceled += instance.OnTestAction;
             }
         }
     }
@@ -1211,6 +1239,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         void OnNote(InputAction.CallbackContext context);
         void OnPrintLog(InputAction.CallbackContext context);
         void OnWipeLog(InputAction.CallbackContext context);
+        void OnTestAction(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
