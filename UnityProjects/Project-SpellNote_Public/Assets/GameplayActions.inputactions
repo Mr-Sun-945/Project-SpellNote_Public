@@ -60,6 +60,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "GoFlat",
+                    "type": "Button",
+                    "id": "3e67d453-9acf-45b8-baa6-2b641b39355b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GoSharp",
+                    "type": "Button",
+                    "id": "768e8f48-5a03-4a27-816e-4e0007dd3dc6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -346,6 +362,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "TestAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eebe7323-83ae-485d-a79d-d05a5fccd6c1",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoFlat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6688bddb-dc39-456a-8a84-eaeb9efbb976",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoSharp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -852,6 +890,166 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player1",
+            "id": "8c26bb07-b083-4ca6-b691-8b053f85f67f",
+            "actions": [
+                {
+                    "name": "oSharp2",
+                    "type": "Button",
+                    "id": "e7567eab-25f2-43de-be2d-7e5225d6b105",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "dSharp2",
+                    "type": "Button",
+                    "id": "07873eb3-1319-482c-b093-01df22421251",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oFlat2",
+                    "type": "Button",
+                    "id": "3fb330f3-2fc9-45f1-bba5-bec964ea88e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "dFlat2",
+                    "type": "Button",
+                    "id": "c10b3a0b-9cba-4d5f-8789-fc0dacd9ac3c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oSharp1dFlat1",
+                    "type": "Button",
+                    "id": "270cb5d0-87a2-4ef4-9826-df2b244f3b4c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oSharp1dSharp1",
+                    "type": "Button",
+                    "id": "6f7d4dbc-94a3-46e0-8d3a-59274d012964",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oFlat1dSharp1",
+                    "type": "Button",
+                    "id": "e5dc7832-df3c-4992-8af2-e1a4996b3f32",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oFlat1dFlat1",
+                    "type": "Button",
+                    "id": "637f37f1-860e-4930-8412-5fc4f6c51564",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "716880eb-2e26-4a20-aa7e-2ff235fec501",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "oSharp2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "adf39d9d-4a6d-45e8-acf4-b28542ac9f78",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "dSharp2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ff7c489-410a-40ce-a387-92e1fa59758e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "oFlat2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "28f1aea0-09d9-4172-9056-203b79bfee69",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "dFlat2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ca696b6-da03-4bb6-a7ac-acf2abd47886",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "oSharp1dFlat1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "799df912-0a3a-4ae7-be4e-d0993aea610b",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "oFlat1dSharp1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81832552-e0fc-4531-b1ef-f966399c3434",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "oSharp1dSharp1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "465d1e96-a50a-4d1c-bc8f-2a55e7c3b780",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "oFlat1dFlat1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

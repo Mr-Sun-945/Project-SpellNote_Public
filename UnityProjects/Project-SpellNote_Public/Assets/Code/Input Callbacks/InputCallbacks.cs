@@ -38,6 +38,20 @@ public class InputCallbacks : MonoBehaviour
         noteLog.WipeLog();
         Debug.Log("Log Wiped");
     }
+
+    public void OnGoFlat(InputValue value)
+    {
+        Debug.Log("Going flat!");
+        ToneBar toneBar = gameObject.GetComponent<ToneBar>();
+        toneBar.GoFlat(1);
+    }
+
+    public void OnGoSharp(InputValue value)
+    {
+        Debug.Log("Going sharp!");
+        ToneBar toneBar = gameObject.GetComponent<ToneBar>();
+        toneBar.GoSharp(1);
+    }
     
     public void OnTestAction(InputValue value)
     {

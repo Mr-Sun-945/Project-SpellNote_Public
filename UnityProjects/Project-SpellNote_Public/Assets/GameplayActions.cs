@@ -73,6 +73,22 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""GoFlat"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e67d453-9acf-45b8-baa6-2b641b39355b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GoSharp"",
+                    ""type"": ""Button"",
+                    ""id"": ""768e8f48-5a03-4a27-816e-4e0007dd3dc6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -359,6 +375,28 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""TestAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eebe7323-83ae-485d-a79d-d05a5fccd6c1"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GoFlat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6688bddb-dc39-456a-8a84-eaeb9efbb976"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GoSharp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -869,6 +907,166 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Player1"",
+            ""id"": ""8c26bb07-b083-4ca6-b691-8b053f85f67f"",
+            ""actions"": [
+                {
+                    ""name"": ""oSharp2"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7567eab-25f2-43de-be2d-7e5225d6b105"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""dSharp2"",
+                    ""type"": ""Button"",
+                    ""id"": ""07873eb3-1319-482c-b093-01df22421251"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oFlat2"",
+                    ""type"": ""Button"",
+                    ""id"": ""3fb330f3-2fc9-45f1-bba5-bec964ea88e2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""dFlat2"",
+                    ""type"": ""Button"",
+                    ""id"": ""c10b3a0b-9cba-4d5f-8789-fc0dacd9ac3c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oSharp1dFlat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""270cb5d0-87a2-4ef4-9826-df2b244f3b4c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oSharp1dSharp1"",
+                    ""type"": ""Button"",
+                    ""id"": ""6f7d4dbc-94a3-46e0-8d3a-59274d012964"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oFlat1dSharp1"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5dc7832-df3c-4992-8af2-e1a4996b3f32"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oFlat1dFlat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""637f37f1-860e-4930-8412-5fc4f6c51564"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""716880eb-2e26-4a20-aa7e-2ff235fec501"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""oSharp2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""adf39d9d-4a6d-45e8-acf4-b28542ac9f78"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dSharp2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ff7c489-410a-40ce-a387-92e1fa59758e"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""oFlat2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""28f1aea0-09d9-4172-9056-203b79bfee69"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dFlat2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ca696b6-da03-4bb6-a7ac-acf2abd47886"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""oSharp1dFlat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""799df912-0a3a-4ae7-be4e-d0993aea610b"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""oFlat1dSharp1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81832552-e0fc-4531-b1ef-f966399c3434"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""oSharp1dSharp1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""465d1e96-a50a-4d1c-bc8f-2a55e7c3b780"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""oFlat1dFlat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -943,6 +1141,8 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         m_Player_PrintLog = m_Player.FindAction("PrintLog", throwIfNotFound: true);
         m_Player_WipeLog = m_Player.FindAction("WipeLog", throwIfNotFound: true);
         m_Player_TestAction = m_Player.FindAction("TestAction", throwIfNotFound: true);
+        m_Player_GoFlat = m_Player.FindAction("GoFlat", throwIfNotFound: true);
+        m_Player_GoSharp = m_Player.FindAction("GoSharp", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -955,6 +1155,16 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Player1
+        m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
+        m_Player1_oSharp2 = m_Player1.FindAction("oSharp2", throwIfNotFound: true);
+        m_Player1_dSharp2 = m_Player1.FindAction("dSharp2", throwIfNotFound: true);
+        m_Player1_oFlat2 = m_Player1.FindAction("oFlat2", throwIfNotFound: true);
+        m_Player1_dFlat2 = m_Player1.FindAction("dFlat2", throwIfNotFound: true);
+        m_Player1_oSharp1dFlat1 = m_Player1.FindAction("oSharp1dFlat1", throwIfNotFound: true);
+        m_Player1_oSharp1dSharp1 = m_Player1.FindAction("oSharp1dSharp1", throwIfNotFound: true);
+        m_Player1_oFlat1dSharp1 = m_Player1.FindAction("oFlat1dSharp1", throwIfNotFound: true);
+        m_Player1_oFlat1dFlat1 = m_Player1.FindAction("oFlat1dFlat1", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1011,6 +1221,8 @@ public class @GameplayActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_PrintLog;
     private readonly InputAction m_Player_WipeLog;
     private readonly InputAction m_Player_TestAction;
+    private readonly InputAction m_Player_GoFlat;
+    private readonly InputAction m_Player_GoSharp;
     public struct PlayerActions
     {
         private @GameplayActions m_Wrapper;
@@ -1022,6 +1234,8 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         public InputAction @PrintLog => m_Wrapper.m_Player_PrintLog;
         public InputAction @WipeLog => m_Wrapper.m_Player_WipeLog;
         public InputAction @TestAction => m_Wrapper.m_Player_TestAction;
+        public InputAction @GoFlat => m_Wrapper.m_Player_GoFlat;
+        public InputAction @GoSharp => m_Wrapper.m_Player_GoSharp;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1052,6 +1266,12 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 @TestAction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTestAction;
                 @TestAction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTestAction;
                 @TestAction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTestAction;
+                @GoFlat.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGoFlat;
+                @GoFlat.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGoFlat;
+                @GoFlat.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGoFlat;
+                @GoSharp.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGoSharp;
+                @GoSharp.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGoSharp;
+                @GoSharp.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGoSharp;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1077,6 +1297,12 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 @TestAction.started += instance.OnTestAction;
                 @TestAction.performed += instance.OnTestAction;
                 @TestAction.canceled += instance.OnTestAction;
+                @GoFlat.started += instance.OnGoFlat;
+                @GoFlat.performed += instance.OnGoFlat;
+                @GoFlat.canceled += instance.OnGoFlat;
+                @GoSharp.started += instance.OnGoSharp;
+                @GoSharp.performed += instance.OnGoSharp;
+                @GoSharp.canceled += instance.OnGoSharp;
             }
         }
     }
@@ -1186,6 +1412,95 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Player1
+    private readonly InputActionMap m_Player1;
+    private IPlayer1Actions m_Player1ActionsCallbackInterface;
+    private readonly InputAction m_Player1_oSharp2;
+    private readonly InputAction m_Player1_dSharp2;
+    private readonly InputAction m_Player1_oFlat2;
+    private readonly InputAction m_Player1_dFlat2;
+    private readonly InputAction m_Player1_oSharp1dFlat1;
+    private readonly InputAction m_Player1_oSharp1dSharp1;
+    private readonly InputAction m_Player1_oFlat1dSharp1;
+    private readonly InputAction m_Player1_oFlat1dFlat1;
+    public struct Player1Actions
+    {
+        private @GameplayActions m_Wrapper;
+        public Player1Actions(@GameplayActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @oSharp2 => m_Wrapper.m_Player1_oSharp2;
+        public InputAction @dSharp2 => m_Wrapper.m_Player1_dSharp2;
+        public InputAction @oFlat2 => m_Wrapper.m_Player1_oFlat2;
+        public InputAction @dFlat2 => m_Wrapper.m_Player1_dFlat2;
+        public InputAction @oSharp1dFlat1 => m_Wrapper.m_Player1_oSharp1dFlat1;
+        public InputAction @oSharp1dSharp1 => m_Wrapper.m_Player1_oSharp1dSharp1;
+        public InputAction @oFlat1dSharp1 => m_Wrapper.m_Player1_oFlat1dSharp1;
+        public InputAction @oFlat1dFlat1 => m_Wrapper.m_Player1_oFlat1dFlat1;
+        public InputActionMap Get() { return m_Wrapper.m_Player1; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player1Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer1Actions instance)
+        {
+            if (m_Wrapper.m_Player1ActionsCallbackInterface != null)
+            {
+                @oSharp2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp2;
+                @oSharp2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp2;
+                @oSharp2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp2;
+                @dSharp2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDSharp2;
+                @dSharp2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDSharp2;
+                @dSharp2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDSharp2;
+                @oFlat2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat2;
+                @oFlat2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat2;
+                @oFlat2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat2;
+                @dFlat2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDFlat2;
+                @dFlat2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDFlat2;
+                @dFlat2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDFlat2;
+                @oSharp1dFlat1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp1dFlat1;
+                @oSharp1dFlat1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp1dFlat1;
+                @oSharp1dFlat1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp1dFlat1;
+                @oSharp1dSharp1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp1dSharp1;
+                @oSharp1dSharp1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp1dSharp1;
+                @oSharp1dSharp1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOSharp1dSharp1;
+                @oFlat1dSharp1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dSharp1;
+                @oFlat1dSharp1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dSharp1;
+                @oFlat1dSharp1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dSharp1;
+                @oFlat1dFlat1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dFlat1;
+                @oFlat1dFlat1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dFlat1;
+                @oFlat1dFlat1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dFlat1;
+            }
+            m_Wrapper.m_Player1ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @oSharp2.started += instance.OnOSharp2;
+                @oSharp2.performed += instance.OnOSharp2;
+                @oSharp2.canceled += instance.OnOSharp2;
+                @dSharp2.started += instance.OnDSharp2;
+                @dSharp2.performed += instance.OnDSharp2;
+                @dSharp2.canceled += instance.OnDSharp2;
+                @oFlat2.started += instance.OnOFlat2;
+                @oFlat2.performed += instance.OnOFlat2;
+                @oFlat2.canceled += instance.OnOFlat2;
+                @dFlat2.started += instance.OnDFlat2;
+                @dFlat2.performed += instance.OnDFlat2;
+                @dFlat2.canceled += instance.OnDFlat2;
+                @oSharp1dFlat1.started += instance.OnOSharp1dFlat1;
+                @oSharp1dFlat1.performed += instance.OnOSharp1dFlat1;
+                @oSharp1dFlat1.canceled += instance.OnOSharp1dFlat1;
+                @oSharp1dSharp1.started += instance.OnOSharp1dSharp1;
+                @oSharp1dSharp1.performed += instance.OnOSharp1dSharp1;
+                @oSharp1dSharp1.canceled += instance.OnOSharp1dSharp1;
+                @oFlat1dSharp1.started += instance.OnOFlat1dSharp1;
+                @oFlat1dSharp1.performed += instance.OnOFlat1dSharp1;
+                @oFlat1dSharp1.canceled += instance.OnOFlat1dSharp1;
+                @oFlat1dFlat1.started += instance.OnOFlat1dFlat1;
+                @oFlat1dFlat1.performed += instance.OnOFlat1dFlat1;
+                @oFlat1dFlat1.canceled += instance.OnOFlat1dFlat1;
+            }
+        }
+    }
+    public Player1Actions @Player1 => new Player1Actions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1240,6 +1555,8 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         void OnPrintLog(InputAction.CallbackContext context);
         void OnWipeLog(InputAction.CallbackContext context);
         void OnTestAction(InputAction.CallbackContext context);
+        void OnGoFlat(InputAction.CallbackContext context);
+        void OnGoSharp(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
@@ -1253,5 +1570,16 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface IPlayer1Actions
+    {
+        void OnOSharp2(InputAction.CallbackContext context);
+        void OnDSharp2(InputAction.CallbackContext context);
+        void OnOFlat2(InputAction.CallbackContext context);
+        void OnDFlat2(InputAction.CallbackContext context);
+        void OnOSharp1dFlat1(InputAction.CallbackContext context);
+        void OnOSharp1dSharp1(InputAction.CallbackContext context);
+        void OnOFlat1dSharp1(InputAction.CallbackContext context);
+        void OnOFlat1dFlat1(InputAction.CallbackContext context);
     }
 }
