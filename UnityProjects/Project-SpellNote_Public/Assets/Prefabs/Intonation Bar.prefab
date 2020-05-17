@@ -1244,6 +1244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marker: {fileID: 5660166614083307306}
+  maxTone: 3
 --- !u!1 &5660166614049056552
 GameObject:
   m_ObjectHideFlags: 0

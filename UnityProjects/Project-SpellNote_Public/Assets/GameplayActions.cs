@@ -984,7 +984,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""oSharp2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -995,7 +995,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""dSharp2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1006,7 +1006,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""oFlat2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1017,7 +1017,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""dFlat2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1028,7 +1028,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""oSharp1dFlat1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1039,7 +1039,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""oFlat1dSharp1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1050,7 +1050,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""oSharp1dSharp1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1061,7 +1061,167 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""oFlat1dFlat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player2"",
+            ""id"": ""9ae72605-4d6b-4061-952e-15fcb729b81c"",
+            ""actions"": [
+                {
+                    ""name"": ""oSharp2"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a0d10c1-17f6-4108-88d6-1b5e9d53275e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""dSharp2"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fdbf30c-06fe-48c7-9d5d-558ac010d1b2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oFlat2"",
+                    ""type"": ""Button"",
+                    ""id"": ""c85d5fb7-3c27-4873-b508-fa5267ec97b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""dFlat2"",
+                    ""type"": ""Button"",
+                    ""id"": ""cbb6806a-295e-44a4-922c-5f9b3ffef7cf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oSharp1dFlat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d166259-c6c1-41d9-9acf-aae3f2884bc2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oSharp1dSharp1"",
+                    ""type"": ""Button"",
+                    ""id"": ""44f473f1-4916-4f26-8fab-f4bdaefbc108"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oFlat1dSharp1"",
+                    ""type"": ""Button"",
+                    ""id"": ""c5aa824e-99ba-4f26-81f2-eb1ac2dd6b2b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""oFlat1dFlat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""dd0293db-7127-4aa9-9c49-821fb8ce9fef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""be7812b6-f050-44f2-b8e0-7978e439d66b"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""oSharp2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4717fab2-c6ee-4d05-ba59-ed2a97ec4f56"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""dSharp2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""10d2356c-dc49-4f76-928b-787bda23fe21"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""oFlat2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7aa3a98d-0824-49c1-8370-1ea8065eebe6"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""dFlat2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1349344e-91f1-4e26-b30a-8361e93c9a66"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""oSharp1dFlat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d4f83e0-9810-4e0d-bda6-8a8e7d89ebdb"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""oFlat1dSharp1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44853a31-f750-4db5-abd3-0db8da7d7fb6"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""oSharp1dSharp1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ffcfddef-302c-412e-838d-42118d34d958"",
+                    ""path"": ""<Keyboard>/semicolon"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""oFlat1dFlat1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1165,6 +1325,16 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         m_Player1_oSharp1dSharp1 = m_Player1.FindAction("oSharp1dSharp1", throwIfNotFound: true);
         m_Player1_oFlat1dSharp1 = m_Player1.FindAction("oFlat1dSharp1", throwIfNotFound: true);
         m_Player1_oFlat1dFlat1 = m_Player1.FindAction("oFlat1dFlat1", throwIfNotFound: true);
+        // Player2
+        m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
+        m_Player2_oSharp2 = m_Player2.FindAction("oSharp2", throwIfNotFound: true);
+        m_Player2_dSharp2 = m_Player2.FindAction("dSharp2", throwIfNotFound: true);
+        m_Player2_oFlat2 = m_Player2.FindAction("oFlat2", throwIfNotFound: true);
+        m_Player2_dFlat2 = m_Player2.FindAction("dFlat2", throwIfNotFound: true);
+        m_Player2_oSharp1dFlat1 = m_Player2.FindAction("oSharp1dFlat1", throwIfNotFound: true);
+        m_Player2_oSharp1dSharp1 = m_Player2.FindAction("oSharp1dSharp1", throwIfNotFound: true);
+        m_Player2_oFlat1dSharp1 = m_Player2.FindAction("oFlat1dSharp1", throwIfNotFound: true);
+        m_Player2_oFlat1dFlat1 = m_Player2.FindAction("oFlat1dFlat1", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1501,6 +1671,95 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         }
     }
     public Player1Actions @Player1 => new Player1Actions(this);
+
+    // Player2
+    private readonly InputActionMap m_Player2;
+    private IPlayer2Actions m_Player2ActionsCallbackInterface;
+    private readonly InputAction m_Player2_oSharp2;
+    private readonly InputAction m_Player2_dSharp2;
+    private readonly InputAction m_Player2_oFlat2;
+    private readonly InputAction m_Player2_dFlat2;
+    private readonly InputAction m_Player2_oSharp1dFlat1;
+    private readonly InputAction m_Player2_oSharp1dSharp1;
+    private readonly InputAction m_Player2_oFlat1dSharp1;
+    private readonly InputAction m_Player2_oFlat1dFlat1;
+    public struct Player2Actions
+    {
+        private @GameplayActions m_Wrapper;
+        public Player2Actions(@GameplayActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @oSharp2 => m_Wrapper.m_Player2_oSharp2;
+        public InputAction @dSharp2 => m_Wrapper.m_Player2_dSharp2;
+        public InputAction @oFlat2 => m_Wrapper.m_Player2_oFlat2;
+        public InputAction @dFlat2 => m_Wrapper.m_Player2_dFlat2;
+        public InputAction @oSharp1dFlat1 => m_Wrapper.m_Player2_oSharp1dFlat1;
+        public InputAction @oSharp1dSharp1 => m_Wrapper.m_Player2_oSharp1dSharp1;
+        public InputAction @oFlat1dSharp1 => m_Wrapper.m_Player2_oFlat1dSharp1;
+        public InputAction @oFlat1dFlat1 => m_Wrapper.m_Player2_oFlat1dFlat1;
+        public InputActionMap Get() { return m_Wrapper.m_Player2; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player2Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer2Actions instance)
+        {
+            if (m_Wrapper.m_Player2ActionsCallbackInterface != null)
+            {
+                @oSharp2.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp2;
+                @oSharp2.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp2;
+                @oSharp2.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp2;
+                @dSharp2.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDSharp2;
+                @dSharp2.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDSharp2;
+                @dSharp2.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDSharp2;
+                @oFlat2.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat2;
+                @oFlat2.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat2;
+                @oFlat2.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat2;
+                @dFlat2.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDFlat2;
+                @dFlat2.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDFlat2;
+                @dFlat2.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDFlat2;
+                @oSharp1dFlat1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp1dFlat1;
+                @oSharp1dFlat1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp1dFlat1;
+                @oSharp1dFlat1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp1dFlat1;
+                @oSharp1dSharp1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp1dSharp1;
+                @oSharp1dSharp1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp1dSharp1;
+                @oSharp1dSharp1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOSharp1dSharp1;
+                @oFlat1dSharp1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat1dSharp1;
+                @oFlat1dSharp1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat1dSharp1;
+                @oFlat1dSharp1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat1dSharp1;
+                @oFlat1dFlat1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat1dFlat1;
+                @oFlat1dFlat1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat1dFlat1;
+                @oFlat1dFlat1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOFlat1dFlat1;
+            }
+            m_Wrapper.m_Player2ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @oSharp2.started += instance.OnOSharp2;
+                @oSharp2.performed += instance.OnOSharp2;
+                @oSharp2.canceled += instance.OnOSharp2;
+                @dSharp2.started += instance.OnDSharp2;
+                @dSharp2.performed += instance.OnDSharp2;
+                @dSharp2.canceled += instance.OnDSharp2;
+                @oFlat2.started += instance.OnOFlat2;
+                @oFlat2.performed += instance.OnOFlat2;
+                @oFlat2.canceled += instance.OnOFlat2;
+                @dFlat2.started += instance.OnDFlat2;
+                @dFlat2.performed += instance.OnDFlat2;
+                @dFlat2.canceled += instance.OnDFlat2;
+                @oSharp1dFlat1.started += instance.OnOSharp1dFlat1;
+                @oSharp1dFlat1.performed += instance.OnOSharp1dFlat1;
+                @oSharp1dFlat1.canceled += instance.OnOSharp1dFlat1;
+                @oSharp1dSharp1.started += instance.OnOSharp1dSharp1;
+                @oSharp1dSharp1.performed += instance.OnOSharp1dSharp1;
+                @oSharp1dSharp1.canceled += instance.OnOSharp1dSharp1;
+                @oFlat1dSharp1.started += instance.OnOFlat1dSharp1;
+                @oFlat1dSharp1.performed += instance.OnOFlat1dSharp1;
+                @oFlat1dSharp1.canceled += instance.OnOFlat1dSharp1;
+                @oFlat1dFlat1.started += instance.OnOFlat1dFlat1;
+                @oFlat1dFlat1.performed += instance.OnOFlat1dFlat1;
+                @oFlat1dFlat1.canceled += instance.OnOFlat1dFlat1;
+            }
+        }
+    }
+    public Player2Actions @Player2 => new Player2Actions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1572,6 +1831,17 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
     }
     public interface IPlayer1Actions
+    {
+        void OnOSharp2(InputAction.CallbackContext context);
+        void OnDSharp2(InputAction.CallbackContext context);
+        void OnOFlat2(InputAction.CallbackContext context);
+        void OnDFlat2(InputAction.CallbackContext context);
+        void OnOSharp1dFlat1(InputAction.CallbackContext context);
+        void OnOSharp1dSharp1(InputAction.CallbackContext context);
+        void OnOFlat1dSharp1(InputAction.CallbackContext context);
+        void OnOFlat1dFlat1(InputAction.CallbackContext context);
+    }
+    public interface IPlayer2Actions
     {
         void OnOSharp2(InputAction.CallbackContext context);
         void OnDSharp2(InputAction.CallbackContext context);

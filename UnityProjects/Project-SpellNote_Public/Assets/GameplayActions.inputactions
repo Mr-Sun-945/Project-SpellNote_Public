@@ -971,7 +971,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "oSharp2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -982,7 +982,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "dSharp2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -993,7 +993,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "oFlat2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1004,7 +1004,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "dFlat2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1015,7 +1015,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "oSharp1dFlat1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1026,7 +1026,7 @@
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "oFlat1dSharp1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1037,7 +1037,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "oSharp1dSharp1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1048,7 +1048,167 @@
                     "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "oFlat1dFlat1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "9ae72605-4d6b-4061-952e-15fcb729b81c",
+            "actions": [
+                {
+                    "name": "oSharp2",
+                    "type": "Button",
+                    "id": "6a0d10c1-17f6-4108-88d6-1b5e9d53275e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "dSharp2",
+                    "type": "Button",
+                    "id": "8fdbf30c-06fe-48c7-9d5d-558ac010d1b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oFlat2",
+                    "type": "Button",
+                    "id": "c85d5fb7-3c27-4873-b508-fa5267ec97b6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "dFlat2",
+                    "type": "Button",
+                    "id": "cbb6806a-295e-44a4-922c-5f9b3ffef7cf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oSharp1dFlat1",
+                    "type": "Button",
+                    "id": "5d166259-c6c1-41d9-9acf-aae3f2884bc2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oSharp1dSharp1",
+                    "type": "Button",
+                    "id": "44f473f1-4916-4f26-8fab-f4bdaefbc108",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oFlat1dSharp1",
+                    "type": "Button",
+                    "id": "c5aa824e-99ba-4f26-81f2-eb1ac2dd6b2b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "oFlat1dFlat1",
+                    "type": "Button",
+                    "id": "dd0293db-7127-4aa9-9c49-821fb8ce9fef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be7812b6-f050-44f2-b8e0-7978e439d66b",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "oSharp2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4717fab2-c6ee-4d05-ba59-ed2a97ec4f56",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "dSharp2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10d2356c-dc49-4f76-928b-787bda23fe21",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "oFlat2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7aa3a98d-0824-49c1-8370-1ea8065eebe6",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "dFlat2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1349344e-91f1-4e26-b30a-8361e93c9a66",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "oSharp1dFlat1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d4f83e0-9810-4e0d-bda6-8a8e7d89ebdb",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "oFlat1dSharp1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44853a31-f750-4db5-abd3-0db8da7d7fb6",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "oSharp1dSharp1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ffcfddef-302c-412e-838d-42118d34d958",
+                    "path": "<Keyboard>/semicolon",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "oFlat1dFlat1",
                     "isComposite": false,
                     "isPartOfComposite": false
