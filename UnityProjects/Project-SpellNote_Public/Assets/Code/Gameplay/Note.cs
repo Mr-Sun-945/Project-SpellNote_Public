@@ -1,10 +1,33 @@
-﻿using System;
+﻿// Purpose: Process note hits for things like accuracy or note type
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Note
+public class Note : MonoBehaviour
 {
+    public Staff staff;
+    public double threshold = .2;
+
+    public double GetBeatsPassed()
+    {
+        double secondsPerBeat = 60.0d / staff.bpm;
+        double beatsPassed = (Time.time/secondsPerBeat) + 1;
+        return beatsPassed;
+    }
+
+    public bool CheckHitSuccess(double beatsPassed)
+    {
+        bool success = false;
+        int nearestBeat = (int)Math.Round(beatsPassed);
+        double accuracy = nearestBeat - beatsPassed;
+        if (-threshold <= accuracy && accuracy <= threshold)
+        {
+            success = true;
+        }
+        return success;
+    }
+
     //TODO: Refactor to be based on target time and hit time.
     //NOTE: Refactor dependant on an IdentifyNote function
     public string HitAccuracy(double beatsPassed)

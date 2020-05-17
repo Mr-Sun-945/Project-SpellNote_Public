@@ -31,8 +31,12 @@ public class ToneBar : MonoBehaviour
         // Update the currentTone based on the final delta amount
         currentTone += amountDelta;
 
+        // Adjust the tickDistance by the local scale component x
+        Vector3 scale = transform.localScale;
+        float tickDistanceScaled = tickDistance * scale.x;
+
         // Use the final delta amount to transform the marker appropriately
-        Vector3 translateAmount = new Vector3(tickDistance*amountDelta, 0.0f, 0.0f);
+        Vector3 translateAmount = new Vector3(tickDistanceScaled*amountDelta, 0.0f, 0.0f);
         marker.transform.Translate(translateAmount);
     }
 

@@ -25,24 +25,24 @@ public class Spell
             int amount = entry.Value;
 
             // GoSharp on the target ToneBar
-            if (type.Equals("oSharp"))
+            if (type.Equals("oSharp"))  // Offense
             {
                 enemyToneBar.GoSharp(amount);
                 continue;
             }
-            if (type.Equals("dSharp"))
+            if (type.Equals("dSharp"))  // Defense
             {
                 playerToneBar.GoSharp(amount);
                 continue;
             }
 
             // GoFlat on the target ToneBar
-            if (type.Equals("oFlat"))
+            if (type.Equals("oFlat"))  // Offense
             {
                 enemyToneBar.GoFlat(amount);
                 continue;
             }
-            if (type.Equals("dFlat"))
+            if (type.Equals("dFlat"))  // Defense
             {
                 playerToneBar.GoFlat(amount);
                 continue;
