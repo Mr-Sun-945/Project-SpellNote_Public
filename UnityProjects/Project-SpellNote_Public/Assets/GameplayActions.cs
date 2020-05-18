@@ -981,7 +981,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""716880eb-2e26-4a20-aa7e-2ff235fec501"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -992,7 +992,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""adf39d9d-4a6d-45e8-acf4-b28542ac9f78"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1003,7 +1003,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2ff7c489-410a-40ce-a387-92e1fa59758e"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1014,7 +1014,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""28f1aea0-09d9-4172-9056-203b79bfee69"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1025,7 +1025,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7ca696b6-da03-4bb6-a7ac-acf2abd47886"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1036,7 +1036,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""799df912-0a3a-4ae7-be4e-d0993aea610b"",
-                    ""path"": ""<Keyboard>/r"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1047,7 +1047,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""81832552-e0fc-4531-b1ef-f966399c3434"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1058,7 +1058,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""465d1e96-a50a-4d1c-bc8f-2a55e7c3b780"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1141,7 +1141,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""be7812b6-f050-44f2-b8e0-7978e439d66b"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/u"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1152,7 +1152,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4717fab2-c6ee-4d05-ba59-ed2a97ec4f56"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1163,7 +1163,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""10d2356c-dc49-4f76-928b-787bda23fe21"",
-                    ""path"": ""<Keyboard>/u"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1174,7 +1174,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7aa3a98d-0824-49c1-8370-1ea8065eebe6"",
-                    ""path"": ""<Keyboard>/j"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1196,7 +1196,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8d4f83e0-9810-4e0d-bda6-8a8e7d89ebdb"",
-                    ""path"": ""<Keyboard>/o"",
+                    ""path"": ""<Keyboard>/semicolon"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -1207,7 +1207,7 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""44853a31-f750-4db5-abd3-0db8da7d7fb6"",
-                    ""path"": ""<Keyboard>/semicolon"",
+                    ""path"": ""<Keyboard>/o"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
