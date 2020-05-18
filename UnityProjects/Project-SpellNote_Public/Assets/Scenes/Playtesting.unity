@@ -602,13 +602,23 @@ PrefabInstance:
     - target: {fileID: 7143933759533131496, guid: 3ad5154ea96086f4188882fb1a6725e0,
         type: 3}
       propertyPath: requireMetronome
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7143933759533131496, guid: 3ad5154ea96086f4188882fb1a6725e0,
         type: 3}
       propertyPath: note
       value: 
       objectReference: {fileID: 1116729359}
+    - target: {fileID: 7143933759533131498, guid: 3ad5154ea96086f4188882fb1a6725e0,
+        type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143933759533131498, guid: 3ad5154ea96086f4188882fb1a6725e0,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
     - target: {fileID: 7143933759533131499, guid: 3ad5154ea96086f4188882fb1a6725e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,6 +748,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7009977229677545437, guid: 497de123e55d6ed4eb35383304796b4c,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
     - target: {fileID: 7009977229677545439, guid: 497de123e55d6ed4eb35383304796b4c,
         type: 3}
       propertyPath: spellDatabase
@@ -756,7 +771,7 @@ PrefabInstance:
     - target: {fileID: 7009977229677545439, guid: 497de123e55d6ed4eb35383304796b4c,
         type: 3}
       propertyPath: requireMetronome
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7009977229677545439, guid: 497de123e55d6ed4eb35383304796b4c,
         type: 3}

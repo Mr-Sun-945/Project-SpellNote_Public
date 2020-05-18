@@ -50,7 +50,7 @@ public class UnityMetronome: MonoBehaviour
                 data[n * channels + i] += x;
                 i++;
             }
-            while (sample + n >= nextTick)
+            while (sample + n >= (nextTick-10000))  // HACK: -10000 is a hack to sync audio with visuals :D
             {
                 nextTick += samplesPerTick;
                 amp = 1.0F;
