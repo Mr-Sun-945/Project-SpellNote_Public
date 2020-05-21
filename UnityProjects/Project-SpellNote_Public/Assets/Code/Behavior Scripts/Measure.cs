@@ -22,10 +22,6 @@ public class Measure : MonoBehaviour
         //Debug.Log("Spawn Time = " + spawnTime);
         deathTime = spawnTime + lifespan;
         //Debug.Log("Death Time = " + deathTime);
-
-        // NOTE: Disabling this because it causes the measures to drift off-beat
-        // Update position based on last frame to keep measure in-line
-        //transform.Translate(staff.frameDelta);
     }
 
     // Update is called once per frame

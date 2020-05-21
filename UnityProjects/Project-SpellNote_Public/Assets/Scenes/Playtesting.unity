@@ -879,12 +879,12 @@ PrefabInstance:
     - target: {fileID: 4302077545644255363, guid: 11906013d1c5a7741bf03b488f184616,
         type: 3}
       propertyPath: gain
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4302077545644255363, guid: 11906013d1c5a7741bf03b488f184616,
         type: 3}
       propertyPath: bpm
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4302077545644255365, guid: 11906013d1c5a7741bf03b488f184616,
         type: 3}

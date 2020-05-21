@@ -31,6 +31,8 @@ public class Staff : MonoBehaviour
     private GameObject previousMeasure;
     private float timePassed = 0.0f;
 
+    private bool playableMeasure = true;
+
     public double bpm { get; private set; }
     public float startTime { get; private set; }
     public float measureLifespan { get; private set; }
@@ -78,8 +80,8 @@ public class Staff : MonoBehaviour
                                              pixelsPerUnit);
 
         // Create initial measures
-        //CreateMeasure(new Vector3(0.0f, 0.0f, 0.0f));
-        //previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f));
+        //CreateMeasure(new Vector3(0.0f, 0.0f, 0.0f), playableMeasure);
+        //previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f), false);
          
     }
 
@@ -94,13 +96,14 @@ public class Staff : MonoBehaviour
             // NOTE: Disabling these 2 lines because they cause the measures to drift off-beat
             //float prevX = previousMeasure.transform.position.x;
             //float xStartPos = prevX + measureWorldWidth;
-            previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f));
+            previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f), playableMeasure);
+            playableMeasure = !playableMeasure;
             timePassed = 0.0f;
         }
     }
 
     // Function to create a measure
-    GameObject CreateMeasure(Vector3 spawnVector)
+    GameObject CreateMeasure(Vector3 spawnVector, bool measureOn)
     {
         //Debug.Log("Creating a measure!");
         //Debug.Log("Measure Spawn Vector = " + spawnVector);
@@ -112,6 +115,11 @@ public class Staff : MonoBehaviour
 
         SpriteRenderer measureSR = measureGO.AddComponent<SpriteRenderer>() as SpriteRenderer;
         measureSR.sprite = measureSprite;
+
+        if (measureOn == false)
+        {
+        measureSR.color = new Color(0.1f, 0.1f, 0.1f);
+        }
 
         Measure measureScript = measureGO.AddComponent<Measure>() as Measure;
 

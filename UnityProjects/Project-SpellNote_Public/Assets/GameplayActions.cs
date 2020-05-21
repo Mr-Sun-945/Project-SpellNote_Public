@@ -975,6 +975,30 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ResetToneBar"",
+                    ""type"": ""Button"",
+                    ""id"": ""bca9437d-b39c-4f7b-be71-ef9fefe0fc70"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MaxToneUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""a45ab248-5d70-4efb-86a7-a1a4a90d6b0a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MaxToneDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""8f482353-8e61-4b4c-88cf-8c8c28d86fdc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -1151,6 +1175,39 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""oFlat1dFlat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""585a520c-aff2-4be9-85f9-95483c30fa49"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ResetToneBar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a7a4e44-7e06-4612-aa80-f940893d17fb"",
+                    ""path"": ""<Keyboard>/period"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MaxToneUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ab58b66-de39-4cc7-8965-3d49ba50f68f"",
+                    ""path"": ""<Keyboard>/comma"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MaxToneDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1413,6 +1470,9 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         m_Player1_oSharp1dSharp1 = m_Player1.FindAction("oSharp1dSharp1", throwIfNotFound: true);
         m_Player1_oFlat1dSharp1 = m_Player1.FindAction("oFlat1dSharp1", throwIfNotFound: true);
         m_Player1_oFlat1dFlat1 = m_Player1.FindAction("oFlat1dFlat1", throwIfNotFound: true);
+        m_Player1_ResetToneBar = m_Player1.FindAction("ResetToneBar", throwIfNotFound: true);
+        m_Player1_MaxToneUp = m_Player1.FindAction("MaxToneUp", throwIfNotFound: true);
+        m_Player1_MaxToneDown = m_Player1.FindAction("MaxToneDown", throwIfNotFound: true);
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_oSharp2 = m_Player2.FindAction("oSharp2", throwIfNotFound: true);
@@ -1682,6 +1742,9 @@ public class @GameplayActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player1_oSharp1dSharp1;
     private readonly InputAction m_Player1_oFlat1dSharp1;
     private readonly InputAction m_Player1_oFlat1dFlat1;
+    private readonly InputAction m_Player1_ResetToneBar;
+    private readonly InputAction m_Player1_MaxToneUp;
+    private readonly InputAction m_Player1_MaxToneDown;
     public struct Player1Actions
     {
         private @GameplayActions m_Wrapper;
@@ -1694,6 +1757,9 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         public InputAction @oSharp1dSharp1 => m_Wrapper.m_Player1_oSharp1dSharp1;
         public InputAction @oFlat1dSharp1 => m_Wrapper.m_Player1_oFlat1dSharp1;
         public InputAction @oFlat1dFlat1 => m_Wrapper.m_Player1_oFlat1dFlat1;
+        public InputAction @ResetToneBar => m_Wrapper.m_Player1_ResetToneBar;
+        public InputAction @MaxToneUp => m_Wrapper.m_Player1_MaxToneUp;
+        public InputAction @MaxToneDown => m_Wrapper.m_Player1_MaxToneDown;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1727,6 +1793,15 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 @oFlat1dFlat1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dFlat1;
                 @oFlat1dFlat1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dFlat1;
                 @oFlat1dFlat1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnOFlat1dFlat1;
+                @ResetToneBar.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResetToneBar;
+                @ResetToneBar.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResetToneBar;
+                @ResetToneBar.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResetToneBar;
+                @MaxToneUp.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxToneUp;
+                @MaxToneUp.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxToneUp;
+                @MaxToneUp.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxToneUp;
+                @MaxToneDown.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxToneDown;
+                @MaxToneDown.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxToneDown;
+                @MaxToneDown.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxToneDown;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1755,6 +1830,15 @@ public class @GameplayActions : IInputActionCollection, IDisposable
                 @oFlat1dFlat1.started += instance.OnOFlat1dFlat1;
                 @oFlat1dFlat1.performed += instance.OnOFlat1dFlat1;
                 @oFlat1dFlat1.canceled += instance.OnOFlat1dFlat1;
+                @ResetToneBar.started += instance.OnResetToneBar;
+                @ResetToneBar.performed += instance.OnResetToneBar;
+                @ResetToneBar.canceled += instance.OnResetToneBar;
+                @MaxToneUp.started += instance.OnMaxToneUp;
+                @MaxToneUp.performed += instance.OnMaxToneUp;
+                @MaxToneUp.canceled += instance.OnMaxToneUp;
+                @MaxToneDown.started += instance.OnMaxToneDown;
+                @MaxToneDown.performed += instance.OnMaxToneDown;
+                @MaxToneDown.canceled += instance.OnMaxToneDown;
             }
         }
     }
@@ -1928,6 +2012,9 @@ public class @GameplayActions : IInputActionCollection, IDisposable
         void OnOSharp1dSharp1(InputAction.CallbackContext context);
         void OnOFlat1dSharp1(InputAction.CallbackContext context);
         void OnOFlat1dFlat1(InputAction.CallbackContext context);
+        void OnResetToneBar(InputAction.CallbackContext context);
+        void OnMaxToneUp(InputAction.CallbackContext context);
+        void OnMaxToneDown(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {

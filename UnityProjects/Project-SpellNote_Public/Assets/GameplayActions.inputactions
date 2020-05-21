@@ -962,6 +962,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ResetToneBar",
+                    "type": "Button",
+                    "id": "bca9437d-b39c-4f7b-be71-ef9fefe0fc70",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MaxToneUp",
+                    "type": "Button",
+                    "id": "a45ab248-5d70-4efb-86a7-a1a4a90d6b0a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MaxToneDown",
+                    "type": "Button",
+                    "id": "8f482353-8e61-4b4c-88cf-8c8c28d86fdc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -1138,6 +1162,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "oFlat1dFlat1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "585a520c-aff2-4be9-85f9-95483c30fa49",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetToneBar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a7a4e44-7e06-4612-aa80-f940893d17fb",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MaxToneUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ab58b66-de39-4cc7-8965-3d49ba50f68f",
+                    "path": "<Keyboard>/comma",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MaxToneDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -6,8 +6,28 @@ public class ToneBar : MonoBehaviour
 {
     public GameObject marker;
     public int maxTone = 3;
+
+    private int toneUpperLimit = 5;
+    private int toneLowerLimit = 2;
     private int currentTone = 0;  // 0=In Tune, -x=Flat, +x=Sharp
     private float tickDistance = 0.5f; // Distance between each tick of intonation
+
+    public void Start()
+    {
+        // Start processes to initialize the ToneBar's size based on given values.
+        ResetToneBar(maxTone);
+    }
+
+    public void ResetToneBar(int newMaxTone)
+    {
+        marker.transform.localPosition = new Vector3(0.0f, 0.0f, -0.02f);
+        currentTone = 0;
+        if (toneLowerLimit <= newMaxTone && newMaxTone <= toneUpperLimit)
+        {
+            maxTone = newMaxTone;
+            // TODO: Swap out sprites here based on the size
+        }
+    }
 
     private void UpdateTone(int amount)
     {

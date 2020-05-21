@@ -51,4 +51,22 @@ public class SpellCallbacks : MonoBehaviour
     {
         spellbook.CastSpell(7);
     }
+
+    public void OnResetToneBar(InputValue value)
+    {
+        spellbook.playerToneBar.ResetToneBar(spellbook.playerToneBar.maxTone);
+        spellbook.enemyToneBar.ResetToneBar(spellbook.enemyToneBar.maxTone);
+    }
+
+    public void OnMaxToneUp(InputValue value)
+    {
+        spellbook.playerToneBar.ResetToneBar(spellbook.playerToneBar.maxTone + 1);
+        spellbook.enemyToneBar.ResetToneBar(spellbook.enemyToneBar.maxTone + 1);
+    }
+
+    public void OnMaxToneDown(InputValue value)
+    {
+        spellbook.playerToneBar.ResetToneBar(spellbook.playerToneBar.maxTone - 1);
+        spellbook.enemyToneBar.ResetToneBar(spellbook.enemyToneBar.maxTone - 1);
+    }
 }
