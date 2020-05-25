@@ -11,7 +11,12 @@ public class Spellbook : MonoBehaviour
     public ToneBar enemyToneBar;
     public Note note;  // This is also required if requireMetronome == true
     public bool requireMetronome = false;
+    public GameObject spellFeedbackPrefab;
     private float lastCastTime = 0;
+
+    private Vector3 spellFeedbackPos;
+    private float feedbackOffset = 0.25f;
+    private float feedbackYPos = -2.8f;
     
     
     //private void Start()
@@ -68,6 +73,31 @@ public class Spellbook : MonoBehaviour
         }
 
         Spell spell = spellDatabase.GetSpell(id);
+/*
+        Vector3 toneBarPos = playerToneBar.transform.position;
+        // Check if the toneBar is player 1 or 2 and getting to position for the spellFeedback
+        if (toneBarPos.x > 0)
+        {
+            spellFeedbackPos = new Vector3(toneBarPos.x - feedbackOffset, feedbackYPos, toneBarPos.z);
+        }
+        else
+        {
+            spellFeedbackPos = new Vector3(toneBarPos.x + feedbackOffset, feedbackYPos, toneBarPos.z);
+        }
+        // Assigning the position to the spellFeedbadck GameBoject
+        GameObject spellFeedback = Instantiate(spellFeedbackPrefab, spellFeedbackPos, Quaternion.identity);
+        // Putting the sprite form the Resources folder onto the GameObject
+        SpriteRenderer spellFeedbackRenderer = spellFeedback.GetComponent<SpriteRenderer>();
+*/        
+        if (id == 0 || id == 1)
+        {
+            playerToneBar.castingFeedbackSprite = Resources.Load("castingFeedback", typeof(Sprite)) as Sprite;
+        }
+        else
+        {
+            playerToneBar.castingFeedbackSprite = Resources.Load("castingFeedback2", typeof(Sprite)) as Sprite;
+        }
+
         spell.StatsToEffect(playerToneBar, enemyToneBar);
         return;
     }

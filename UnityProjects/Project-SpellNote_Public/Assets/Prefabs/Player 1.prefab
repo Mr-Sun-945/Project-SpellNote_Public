@@ -79,6 +79,10 @@ MonoBehaviour:
   spellDatabase: {fileID: 0}
   playerToneBar: {fileID: 0}
   enemyToneBar: {fileID: 0}
+  note: {fileID: 0}
+  requireMetronome: 0
+  spellFeedbackPrefab: {fileID: 4306941165325737837, guid: 341da667d5b3c5347b58ac2fb1c60372,
+    type: 3}
 --- !u!114 &7009977229677545438
 MonoBehaviour:
   m_ObjectHideFlags: 0

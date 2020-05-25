@@ -6,11 +6,14 @@ public class ToneBar : MonoBehaviour
 {
     public GameObject marker;
     public int maxTone = 3;
-
+    public float castingFeedbackLifespan;
+    public Sprite castingFeedbackSprite;
+    public GameObject castingFeedback;
     private int toneUpperLimit = 5;
     private int toneLowerLimit = 2;
     private int currentTone = 0;  // 0=In Tune, -x=Flat, +x=Sharp
     private float tickDistance = 0.5f; // Distance between each tick of intonation
+    
 
     public void Start()
     {
@@ -68,5 +71,12 @@ public class ToneBar : MonoBehaviour
     public void GoSharp(int amount)
     {
         UpdateTone(amount);
+    }
+
+    public void FixedUpdate()
+    {
+        // Hiding the castingFeedback
+        //castingFeedback.GetComponent<Renderer>().enabled = false;
+        castingFeedback.GetComponent<SpriteRenderer>().sprite = castingFeedbackSprite;
     }
 }
