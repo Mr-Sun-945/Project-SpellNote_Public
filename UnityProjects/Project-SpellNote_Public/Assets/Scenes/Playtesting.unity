@@ -347,7 +347,7 @@ PrefabInstance:
     - target: {fileID: 2383943495095266521, guid: f24188df8e2be98448e32033db0bd2c3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2383943495095266521, guid: f24188df8e2be98448e32033db0bd2c3,
         type: 3}
@@ -374,6 +374,21 @@ PrefabInstance:
       propertyPath: metronomeObject
       value: 
       objectReference: {fileID: 899166}
+    - target: {fileID: 8330807460896982647, guid: f24188df8e2be98448e32033db0bd2c3,
+        type: 3}
+      propertyPath: note
+      value: 
+      objectReference: {fileID: 1116729359}
+    - target: {fileID: 8330807460896982647, guid: f24188df8e2be98448e32033db0bd2c3,
+        type: 3}
+      propertyPath: toneBarP1
+      value: 
+      objectReference: {fileID: 1180723626}
+    - target: {fileID: 8330807460896982647, guid: f24188df8e2be98448e32033db0bd2c3,
+        type: 3}
+      propertyPath: toneBarP2
+      value: 
+      objectReference: {fileID: 1970400448}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24188df8e2be98448e32033db0bd2c3, type: 3}
 --- !u!1001 &934116516
@@ -868,6 +883,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2495276653671549220, guid: 04393a44684c7034d949b86f1ebb80d4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2495276653671549220, guid: 04393a44684c7034d949b86f1ebb80d4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2495276653671549220, guid: 04393a44684c7034d949b86f1ebb80d4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 5660166613695447064, guid: 04393a44684c7034d949b86f1ebb80d4,
         type: 3}
       propertyPath: m_Name
@@ -943,6 +973,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8787104121423566300, guid: 04393a44684c7034d949b86f1ebb80d4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04393a44684c7034d949b86f1ebb80d4, type: 3}
 --- !u!1001 &1386112527
@@ -960,7 +995,7 @@ PrefabInstance:
     - target: {fileID: 4302077545644255363, guid: 11906013d1c5a7741bf03b488f184616,
         type: 3}
       propertyPath: gain
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4302077545644255363, guid: 11906013d1c5a7741bf03b488f184616,
         type: 3}
@@ -1053,6 +1088,11 @@ PrefabInstance:
       propertyPath: staff
       value: 
       objectReference: {fileID: 943938131}
+    - target: {fileID: 6105864719493929277, guid: 0129583093fc8c24684bbf1c82445c44,
+        type: 3}
+      propertyPath: metronomeObject
+      value: 
+      objectReference: {fileID: 899166}
     - target: {fileID: 9000267924872815272, guid: 0129583093fc8c24684bbf1c82445c44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1091,7 +1131,7 @@ PrefabInstance:
     - target: {fileID: 9000267924872815272, guid: 0129583093fc8c24684bbf1c82445c44,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9000267924872815272, guid: 0129583093fc8c24684bbf1c82445c44,
         type: 3}

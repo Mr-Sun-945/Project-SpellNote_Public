@@ -11,9 +11,9 @@ public class ToneBar : MonoBehaviour
     public GameObject castingFeedback;
     private int toneUpperLimit = 5;
     private int toneLowerLimit = 2;
-    private int currentTone = 0;  // 0=In Tune, -x=Flat, +x=Sharp
     private float tickDistance = 0.5f; // Distance between each tick of intonation
     
+    public int currentTone { get; private set; } = 0;  // 0=In Tune, -x=Flat, +x=Sharp
 
     public void Start()
     {

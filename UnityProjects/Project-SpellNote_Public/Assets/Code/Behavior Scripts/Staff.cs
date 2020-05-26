@@ -1,17 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Staff : MonoBehaviour
 {
     // Public vars
-    public GameObject metronomeObject;
+    public Note note;
     public Texture2D measureTexture;
     public Vector3 translateDirection;
     public double maxMeasures = 4;
 
-    // Private vars
+    public ToneBar toneBarP1;
+    public ToneBar toneBarP2;
 
+    // Private vars
     private Vector2 pivotPoint = new Vector2(0.0f, 0.5f); // Pivot aligned to left-center
     private float pixelsPerUnit = 100.0f;
     private float measurePixelWidth;
@@ -31,30 +34,29 @@ public class Staff : MonoBehaviour
     private GameObject previousMeasure;
     private float timePassed = 0.0f;
 
-    private bool playableMeasure = true;
+    private bool spawnPlayableMeasure = true;
+    private bool currentMeasurePlayable;
 
+    // Public get, private set
     public double bpm { get; private set; }
     public float startTime { get; private set; }
     public float measureLifespan { get; private set; }
     public Vector3 frameDelta { get; private set; }
 
-    // Perform all other-object data queries prior to Start
-    void Awake()
-    {
-        UnityMetronome metronomeScript = metronomeObject.GetComponent<UnityMetronome>();
-        bpm = metronomeScript.bpm;
-        Debug.Log("Current BPM = " + bpm);
-
-        measurePixelWidth = measureTexture.width;
-        measurePixelHeight = measureTexture.height;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
+        // Grab bpm from the note object
+        bpm = note.bpm;
+        Debug.Log("Current BPM = " + bpm);
+
         startTime = Time.time;
         Debug.Log("Start Time = " + startTime);
+
         // Calculate the world width of a measure / beat
+        measurePixelWidth = measureTexture.width;
+        measurePixelHeight = measureTexture.height;
+
         measureWorldWidth = measurePixelWidth / pixelsPerUnit;
         Debug.Log("Measure Size = " + measureWorldWidth);
         beatWorldWidth = measureWorldWidth / 4;
@@ -80,9 +82,8 @@ public class Staff : MonoBehaviour
                                              pixelsPerUnit);
 
         // Create initial measures
-        //CreateMeasure(new Vector3(0.0f, 0.0f, 0.0f), playableMeasure);
+        //CreateMeasure(new Vector3(0.0f, 0.0f, 0.0f), spawnPlayableMeasure);
         //previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f), false);
-         
     }
 
     // Update is called once per frame
@@ -93,17 +94,64 @@ public class Staff : MonoBehaviour
         timePassed += Time.deltaTime;
         if (nextMeasureTime <= Time.time)
         {
+            // TODO: Add a calculation to account for the offset missing due to irrational division?
+            // Find the remainder of BPM / 60 (or whatever calculation) and adjust the initial spawn point?
+            // May still cause drift or inaccurate audio/hitMarker
+
             // NOTE: Disabling these 2 lines because they cause the measures to drift off-beat
             //float prevX = previousMeasure.transform.position.x;
             //float xStartPos = prevX + measureWorldWidth;
-            previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f), playableMeasure);
-            playableMeasure = !playableMeasure;
+            previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f), spawnPlayableMeasure);
+            spawnPlayableMeasure = !spawnPlayableMeasure;
             timePassed = 0.0f;
         }
+        
+        // If we've just switched from a playable measure to an unplayable measure...
+        if (note.IsMeasurePlayable() != currentMeasurePlayable && currentMeasurePlayable == true)
+        {
+            bool p1Loss = false;
+            bool p2Loss = false;
+            // Check victory condition
+            // Check both tone bars to see if either is broken (i.e. currentTone == maxTone)
+            if (Math.Abs(toneBarP1.currentTone) == toneBarP1.maxTone)
+            {
+                p1Loss = true;
+            }
+            if (Math.Abs(toneBarP2.currentTone) == toneBarP2.maxTone)
+            {
+                p2Loss = true;
+            }
+
+            // If at least one person lost, log it and restart the tone bars
+            if (p1Loss == true || p2Loss == true)
+            {
+                Debug.Log("Match over!");
+                // Log the winner
+                if (p1Loss == true && p2Loss == true)
+                {
+                    Debug.Log("It's a draw!");
+                }
+                else if (p1Loss == true)
+                {
+                    Debug.Log("Player 2 Wins!");
+                }
+                else
+                {
+                    Debug.Log("Player 1 Wins!");
+                }
+
+                // Reset the tone bars
+                toneBarP1.ResetToneBar(toneBarP1.maxTone);
+                toneBarP2.ResetToneBar(toneBarP2.maxTone);
+            }
+        }
+        
+        // Update currentMeasurePlayable
+        currentMeasurePlayable = note.IsMeasurePlayable();
     }
 
     // Function to create a measure
-    GameObject CreateMeasure(Vector3 spawnVector, bool measureOn)
+    private GameObject CreateMeasure(Vector3 spawnVector, bool measureOn)
     {
         //Debug.Log("Creating a measure!");
         //Debug.Log("Measure Spawn Vector = " + spawnVector);

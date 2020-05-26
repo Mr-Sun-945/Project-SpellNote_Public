@@ -6,18 +6,28 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public Staff staff;
+    public GameObject metronomeObject;
     public double threshold = .2;
+
+    public double bpm { get; private set; }
+
+    public void Awake()
+    {
+        UnityMetronome metronomeScript = metronomeObject.GetComponent<UnityMetronome>();
+        bpm = metronomeScript.bpm;
+        Debug.Log("Current BPM = " + bpm);
+    }
 
     public double GetBeatsPassed()
     {
-        double secondsPerBeat = 60.0d / staff.bpm;
+        double secondsPerBeat = 60.0d / bpm;
         double beatsPassed = (Time.time/secondsPerBeat) + 1;
         return beatsPassed;
     }
 
-    public bool CheckHitSuccess(double beatsPassed)
+    public bool CheckHitSuccess()
     {
+        double beatsPassed = GetBeatsPassed();
         bool success = false;
         int nearestBeat = (int)Math.Round(beatsPassed);
         double accuracy = nearestBeat - beatsPassed;
@@ -81,6 +91,23 @@ public class Note : MonoBehaviour
         double fractionHit = beatHit - Math.Truncate(beatHit);
 
         return beatHit;
+    }
+
+    public bool IsMeasurePlayable()
+    {
+        double beatsPassed = GetBeatsPassed();
+        
+        // NOTE: Starts unplayable, alternating each measure.
+        // false if inside an unplayable measure, true if inside a playable one
+        double quantizedBeat = beatsPassed - (Math.Floor((beatsPassed - 1) / 8) * 8);
+        if (quantizedBeat < 4.75 || 8.75 < quantizedBeat) // NOTE: unplayable is 1-4, playable is 5-8
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public double QuantizeToMeasure(double beat)

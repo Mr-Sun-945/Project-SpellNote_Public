@@ -11,28 +11,47 @@ public class Spellbook : MonoBehaviour
     public ToneBar enemyToneBar;
     public Note note;  // This is also required if requireMetronome == true
     public bool requireMetronome = false;
-    public GameObject spellFeedbackPrefab;
+    //public GameObject spellFeedbackPrefab;
     private float lastCastTime = 0;
 
     private Vector3 spellFeedbackPos;
-    private float feedbackOffset = 0.25f;
-    private float feedbackYPos = -2.8f;
+    //private float feedbackOffset = 0.25f;
+    //private float feedbackYPos = -2.8f;
+    
+    // private sprite vars
+    private Sprite castingFeedback1;
+    private Sprite castingFeedback2;
     
     
-    //private void Start()
-    //{
-    //    foreach(Spell spell in spellDatabase.spells)
-    //    {
-    //        characterSpells.Add(spell);
-    //    }
-    //}
+    void Start()
+    {
+        // Load in sprites for castingFeedback
+        castingFeedback1 = Resources.Load("castingFeedback", typeof(Sprite)) as Sprite;
+        castingFeedback2 = Resources.Load("castingFeedback2", typeof(Sprite)) as Sprite;
+    }
 
+    void FixedUpdate()
+    {
+        // TODO: Some sprite management nonsense
+    }
     //public void GiveSpell(int id)
     //{
     //    Spell spellToAdd = spellDatabase.GetSpell(id);
     //    characterSpells.Add(spellToAdd);
     //    Debug.Log("Added item: " + spellToAdd.title);
     //}
+
+    public IEnumerator Fade(SpriteRenderer spriteRenderer)
+    {
+        for (float alpha=1f; alpha > -0.02; alpha -= 0.1f)
+        {
+            Color c = spriteRenderer.color;
+            c.a = alpha;
+            spriteRenderer.color = c;
+            yield return null;
+        }
+        playerToneBar.castingFeedbackSprite = null;
+    }
 
     public void CastSpell(int id)
     {
@@ -51,19 +70,17 @@ public class Spellbook : MonoBehaviour
         // If using a metronome, verify that the note falls on a playable measure and is accurate
         if (requireMetronome == true)
         {
-            double beatsPassed = note.GetBeatsPassed();
-
-            // NOTE: Starts unplayable, alternating each measure.
-            // Return if the user if casting inside of an unplayable measure
-            double quantizedBeat = beatsPassed - (Math.Floor((beatsPassed - 1) / 8) * 8);
-            if (quantizedBeat < 4.5 || 8.5 < quantizedBeat) // NOTE: unplayable is 1-4, playable is 5-8
+            // Check for playable measure
+            bool playable = note.IsMeasurePlayable();
+            // Return early if the current measure is unplayable
+            if (playable == false)
             {
                 Debug.Log("Cast failed due to unplayable measure");
                 return;
             }
 
             // Check for note success
-            bool success = note.CheckHitSuccess(beatsPassed);
+            bool success = note.CheckHitSuccess();
             // Return early if the spell wasn't cast accurately enough
             if (success == false)
             {
@@ -89,13 +106,16 @@ public class Spellbook : MonoBehaviour
         // Putting the sprite form the Resources folder onto the GameObject
         SpriteRenderer spellFeedbackRenderer = spellFeedback.GetComponent<SpriteRenderer>();
 */        
+        // Update castingFeedbackSprite to let the player know they've cast successfully
         if (id == 0 || id == 1)
         {
-            playerToneBar.castingFeedbackSprite = Resources.Load("castingFeedback", typeof(Sprite)) as Sprite;
+            playerToneBar.castingFeedbackSprite = castingFeedback1;
+            StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
         }
         else
         {
-            playerToneBar.castingFeedbackSprite = Resources.Load("castingFeedback2", typeof(Sprite)) as Sprite;
+            playerToneBar.castingFeedbackSprite = castingFeedback2;
+            StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
         }
 
         spell.StatsToEffect(playerToneBar, enemyToneBar);
