@@ -5,6 +5,8 @@ using UnityEngine;
 public class ToneBar : MonoBehaviour
 {
     public GameObject marker;
+    public GameObject flatEnd;
+    public GameObject sharpEnd;
     public int maxTone = 3;
     public float castingFeedbackLifespan;
     public Sprite castingFeedbackSprite;
@@ -23,12 +25,14 @@ public class ToneBar : MonoBehaviour
 
     public void ResetToneBar(int newMaxTone)
     {
-        marker.transform.localPosition = new Vector3(0.0f, 0.0f, -0.02f);
+        marker.transform.localPosition = new Vector3(0.0f, 0.0f, -0.2f);
         currentTone = 0;
         if (toneLowerLimit <= newMaxTone && newMaxTone <= toneUpperLimit)
         {
             maxTone = newMaxTone;
-            // TODO: Swap out sprites here based on the size
+            float endPos = maxTone * tickDistance;
+            flatEnd.transform.localPosition = new Vector3(0.0f, -endPos, -0.1f);
+            sharpEnd.transform.localPosition = new Vector3(0.0f, endPos, -0.1f);
         }
     }
 
@@ -59,7 +63,7 @@ public class ToneBar : MonoBehaviour
         float tickDistanceScaled = tickDistance * scale.x;
 
         // Use the final delta amount to transform the marker appropriately
-        Vector3 translateAmount = new Vector3(tickDistanceScaled*amountDelta, 0.0f, 0.0f);
+        Vector3 translateAmount = new Vector3(0.0f, tickDistanceScaled*amountDelta, 0.0f);
         marker.transform.Translate(translateAmount);
     }
 
