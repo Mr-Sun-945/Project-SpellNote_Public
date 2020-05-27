@@ -19,15 +19,15 @@ public class Spellbook : MonoBehaviour
     //private float feedbackYPos = -2.8f;
     
     // private sprite vars
-    private Sprite castingFeedback1;
-    private Sprite castingFeedback2;
+    private Sprite castingFeedbackSuccess;
+    private Sprite castingFeedbackFail;
     
     
     void Start()
     {
         // Load in sprites for castingFeedback
-        castingFeedback1 = Resources.Load("castingFeedback", typeof(Sprite)) as Sprite;
-        castingFeedback2 = Resources.Load("castingFeedback2", typeof(Sprite)) as Sprite;
+        castingFeedbackSuccess = Resources.Load("castingFeedback", typeof(Sprite)) as Sprite;
+        castingFeedbackFail = Resources.Load("castingFeedback2", typeof(Sprite)) as Sprite;
     }
 
     void FixedUpdate()
@@ -75,6 +75,9 @@ public class Spellbook : MonoBehaviour
             // Return early if the current measure is unplayable
             if (playable == false)
             {
+                playerToneBar.castingFeedbackSprite = castingFeedbackFail;
+                StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
+
                 Debug.Log("Cast failed due to unplayable measure");
                 return;
             }
@@ -84,6 +87,9 @@ public class Spellbook : MonoBehaviour
             // Return early if the spell wasn't cast accurately enough
             if (success == false)
             {
+                playerToneBar.castingFeedbackSprite = castingFeedbackFail;
+                StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
+
                 Debug.Log("Cast failed!");
                 return;
             }
@@ -107,16 +113,8 @@ public class Spellbook : MonoBehaviour
         SpriteRenderer spellFeedbackRenderer = spellFeedback.GetComponent<SpriteRenderer>();
 */        
         // Update castingFeedbackSprite to let the player know they've cast successfully
-        if (id == 0 || id == 1)
-        {
-            playerToneBar.castingFeedbackSprite = castingFeedback1;
-            StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
-        }
-        else
-        {
-            playerToneBar.castingFeedbackSprite = castingFeedback2;
-            StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
-        }
+        playerToneBar.castingFeedbackSprite = castingFeedbackSuccess;
+        StartCoroutine("Fade", playerToneBar.castingFeedback.GetComponent<SpriteRenderer>());
 
         spell.StatsToEffect(playerToneBar, enemyToneBar);
         return;
