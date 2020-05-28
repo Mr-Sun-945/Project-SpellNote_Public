@@ -14,6 +14,8 @@ public class Staff : MonoBehaviour
     public ToneBar toneBarP1;
     public ToneBar toneBarP2;
 
+    public SpriteRenderer matchResultFeedback;
+
     // Private vars
     private Vector2 pivotPoint = new Vector2(0.0f, 0.5f); // Pivot aligned to left-center
     private float pixelsPerUnit = 100.0f;
@@ -36,6 +38,10 @@ public class Staff : MonoBehaviour
 
     private bool spawnPlayableMeasure = true;
     private bool currentMeasurePlayable;
+
+    private Sprite matchP1Win;
+    private Sprite matchP2Win;
+    private Sprite matchTie;
 
     // Public get, private set
     public double bpm { get; private set; }
@@ -84,6 +90,10 @@ public class Staff : MonoBehaviour
         // Create initial measures
         //CreateMeasure(new Vector3(0.0f, 0.0f, 0.0f), spawnPlayableMeasure);
         //previousMeasure = CreateMeasure(new Vector3(measureWorldWidth, 0.0f, 0.0f), false);
+        
+        matchP1Win = Resources.Load("Player1Win", typeof(Sprite)) as Sprite;
+        matchP2Win = Resources.Load("Player2Win", typeof(Sprite)) as Sprite;
+        matchTie = Resources.Load("Tie", typeof(Sprite)) as Sprite;
     }
 
     // Update is called once per frame
@@ -129,14 +139,17 @@ public class Staff : MonoBehaviour
                 // Log the winner
                 if (p1Loss == true && p2Loss == true)
                 {
-                    Debug.Log("It's a draw!");
+                    StartCoroutine("MatchFade", matchTie);
+                    Debug.Log("It's a tie!");
                 }
                 else if (p1Loss == true)
                 {
+                    StartCoroutine("MatchFade", matchP2Win);
                     Debug.Log("Player 2 Wins!");
                 }
                 else
                 {
+                    StartCoroutine("MatchFade", matchP1Win);
                     Debug.Log("Player 1 Wins!");
                 }
 
@@ -148,6 +161,19 @@ public class Staff : MonoBehaviour
         
         // Update currentMeasurePlayable
         currentMeasurePlayable = note.IsMeasurePlayable();
+    }
+
+    public IEnumerator MatchFade(Sprite resultSprite)
+    {
+        matchResultFeedback.sprite = resultSprite;
+        for (float alpha=1f; alpha > -0.02f; alpha -= 0.01f)
+        {
+            Color c = matchResultFeedback.color;
+            c.a = alpha;
+            matchResultFeedback.color = c;
+            yield return null;
+        }
+        matchResultFeedback.sprite = null;
     }
 
     // Function to create a measure

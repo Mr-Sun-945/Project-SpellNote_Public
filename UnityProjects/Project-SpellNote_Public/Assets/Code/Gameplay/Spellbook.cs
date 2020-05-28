@@ -26,8 +26,8 @@ public class Spellbook : MonoBehaviour
     void Start()
     {
         // Load in sprites for castingFeedback
-        castingFeedbackSuccess = Resources.Load("castingFeedback", typeof(Sprite)) as Sprite;
-        castingFeedbackFail = Resources.Load("castingFeedback2", typeof(Sprite)) as Sprite;
+        castingFeedbackSuccess = Resources.Load("CastSuccess", typeof(Sprite)) as Sprite;
+        castingFeedbackFail = Resources.Load("CastFail", typeof(Sprite)) as Sprite;
     }
 
     void FixedUpdate()
@@ -43,7 +43,7 @@ public class Spellbook : MonoBehaviour
 
     public IEnumerator Fade(SpriteRenderer spriteRenderer)
     {
-        for (float alpha=1f; alpha > -0.02; alpha -= 0.1f)
+        for (float alpha=1f; alpha > -0.02f; alpha -= 0.1f)
         {
             Color c = spriteRenderer.color;
             c.a = alpha;
